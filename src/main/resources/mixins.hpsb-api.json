@@ -1,0 +1,13 @@
+{
+    "compatibilityLevel": "JAVA_8",
+    "minVersion": "0.7",
+    "package": "xyz.deftu.hbsp.mixin",
+    "client": [
+        ""
+    ],
+    "injectors": {
+        "maxShiftBy": 5
+    },
+    "refmap": "mixins.hbsp-api.refmap.json",
+    "verbose": true
+}

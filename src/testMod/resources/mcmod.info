@@ -1,0 +1,18 @@
+[
+    {
+        "modid": "test-mod",
+        "name": "Test Mod",
+        "description": "",
+        "version": "1.0.0",
+        "mcversion": "1.8.9",
+        "url": "",
+        "updateUrl": "",
+        "authorList": [
+            "Deftu"
+        ],
+        "credits": "",
+        "logoFile": "",
+        "screenshots": [],
+        "dependencies": []
+    }
+]
