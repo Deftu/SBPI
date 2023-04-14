@@ -2,8 +2,9 @@ import xyz.deftu.gradle.utils.GameSide
 
 plugins {
     java
+    kotlin("jvm") version("1.6.21")
     `maven-publish`
-    val dgtVersion = "1.10.1"
+    val dgtVersion = "1.10.4"
     id("xyz.deftu.gradle.tools") version(dgtVersion)
     id("xyz.deftu.gradle.tools.shadow") version(dgtVersion)
     id("xyz.deftu.gradle.tools.blossom") version(dgtVersion)
@@ -23,6 +24,26 @@ loomHelper {
     disableRunConfigs(GameSide.SERVER)
 }
 
+// create "api" source set
+// make it have the same compile classpath as the main source set
+// make the main source set depend on the api source set
+sourceSets {
+    val api by creating {
+        compileClasspath += main.get().compileClasspath
+        runtimeClasspath += main.get().runtimeClasspath
+    }
+
+    main {
+        compileClasspath += api.output
+        runtimeClasspath += api.output
+    }
+
+    named("testMod") {
+        compileClasspath += api.output
+        runtimeClasspath += api.output
+    }
+}
+
 repositories {
     maven("https://repo.polyfrost.cc/releases")
 }
@@ -35,6 +56,6 @@ dependencies {
 releases {
     github {
         owner.set("Deftu")
-        repository.set("HPSB-API")
+        repository.set("SBPI")
     }
 }

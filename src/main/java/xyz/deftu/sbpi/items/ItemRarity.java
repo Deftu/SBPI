@@ -1,4 +1,4 @@
-package xyz.deftu.hbsp.items;
+package xyz.deftu.sbpi.items;
 
 import java.util.regex.Pattern;
 

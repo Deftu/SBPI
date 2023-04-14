@@ -1,4 +1,4 @@
-package xyz.deftu.hbsp.items;
+package xyz.deftu.sbpi.items;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;

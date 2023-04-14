@@ -1,7 +1,7 @@
 {
     "compatibilityLevel": "JAVA_8",
     "minVersion": "0.7",
-    "package": "xyz.deftu.hbsp.mixin",
+    "package": "xyz.deftu.hpsb.mixin",
     "client": [
         ""
     ],
